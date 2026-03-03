@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gamer | Loja Gamer Profissional</title>
+    <meta name="description" content="Loja gamer profissional com os melhores periféricos RGB, cadeiras gamer e equipamentos de alta performance.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">NEXUS <span>GAMER</span></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Produtos</a>
+        <a href="#">Promoções</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <div class="banner-content">
+        <h1>Setup Gamer Profissional</h1>
+        <p>Performance extrema, design RGB e preços insanos.</p>
+        <button onclick="scrollToProducts()">Explorar Produtos</button>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h2>🔥 Produtos em Destaque</h2>
+    <div class="product-grid">
+
+        <div class="product">
+            <div class="badge">Mais Vendido</div>
+            <h3>Headset Gamer RGB</h3>
+            <p class="price">R$ 199,90</p>
+            <button onclick="addToCart('Headset Gamer RGB',199.90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <h3>Teclado Mecânico RGB</h3>
+            <p class="price">R$ 349,90</p>
+            <button onclick="addToCart('Teclado Mecânico RGB',349.90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <h3>Mouse Gamer 7200 DPI</h3>
+            <p class="price">R$ 149,90</p>
+            <button onclick="addToCart('Mouse Gamer 7200 DPI',149.90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <h3>Cadeira Gamer Pro</h3>
+            <p class="price">R$ 899,90</p>
+            <button onclick="addToCart('Cadeira Gamer Pro',899.90)">Adicionar ao Carrinho</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="benefits">
+    <div class="benefit">🚚 Frete Rápido para todo Brasil</div>
+    <div class="benefit">🔒 Compra 100% Segura</div>
+    <div class="benefit">💳 Parcelamento em até 12x</div>
+</section>
+
+<div class="cart-icon" onclick="openCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <h2>Seu Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p class="total">Total: R$ <span id="cart-total">0.00</span></p>
+        <button onclick="closeCart()">Fechar</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Nexus Gamer - Todos os direitos reservados</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
