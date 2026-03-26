@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +11,15 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(17,17,17,0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: #111;
     border-bottom: 1px solid #00ff88;
 }
 
@@ -54,19 +57,20 @@ nav a:hover {
     font-family: 'Orbitron', sans-serif;
 }
 
-.banner button {
+button {
     margin-top: 20px;
-    padding: 15px 40px;
+    padding: 12px 30px;
     background: #00ff88;
     border: none;
-    font-weight: bold;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-.banner button:hover {
+button:hover {
     background: #00cc6a;
-    box-shadow: 0 0 15px #00ff88;
+    transform: translateY(-2px);
 }
 
 .products {
@@ -82,10 +86,12 @@ nav a:hover {
 }
 
 .product {
-    background: #1a1a1a;
+    background: linear-gradient(145deg, #1a1a1a, #141414);
     padding: 25px;
     border-radius: 15px;
+    border: 1px solid #222;
     transition: 0.3s;
+    position: relative;
 }
 
 .product:hover {
@@ -99,12 +105,24 @@ nav a:hover {
     color: #00ff88;
 }
 
-.product button {
-    padding: 12px;
-    width: 100%;
-    background: #00ff88;
-    border: none;
-    cursor: pointer;
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #0c0c0c;
+    border-top: 1px solid #00ff88;
 }
 
 .cart-icon {
@@ -148,29 +166,12 @@ footer {
 }
 .product img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: contain;
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
+    margin: 10px 0;
     transition: 0.3s;
 }
 
 .product:hover img {
-    transform: scale(1.05);
-}
-.product {
-    position: relative;
-}
-
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: red;
-    color: white;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    font-weight: bold;
+    transform: scale(1.08);
 }

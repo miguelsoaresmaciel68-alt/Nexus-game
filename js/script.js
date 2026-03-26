@@ -1,4 +1,3 @@
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
@@ -11,6 +10,12 @@ function addToCart(name, price) {
     updateCart();
 }
 
+function removeItem(index) {
+    cart.splice(index, 1);
+    saveCart();
+    updateCart();
+}
+
 function updateCart() {
     document.getElementById("cart-count").innerText = cart.length;
     let cartItems = document.getElementById("cart-items");
@@ -19,7 +24,8 @@ function updateCart() {
 
     cart.forEach((item, index) => {
         let li = document.createElement("li");
-        li.textContent = item.name + " - R$ " + item.price.toFixed(2);
+        li.innerHTML = `${item.name} - R$ ${item.price.toFixed(2)} 
+        <button onclick="removeItem(${index})">X</button>`;
         cartItems.appendChild(li);
         total += item.price;
     });
