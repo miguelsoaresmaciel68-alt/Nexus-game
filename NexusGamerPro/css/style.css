@@ -164,3 +164,14 @@ footer {
     background: #111;
     margin-top: 50px;
 }
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.08);
+}
